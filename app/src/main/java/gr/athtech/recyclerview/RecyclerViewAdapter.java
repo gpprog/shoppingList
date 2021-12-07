@@ -12,14 +12,24 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
+    interface Listener {
+
+        public void onItemClick(View view , String data );
+
+    }
+
+
+
     @NonNull
     private List<String> arrayData;
-    private Context context;
+    private Listener callback;
 
 
-    public RecyclerViewAdapter(List<String> arrayData, Context context) {
+    public RecyclerViewAdapter(List<String> arrayData, Listener callback) {
+
+
         this.arrayData = arrayData;
-        this.context = context;
+        this.callback = callback;
     }
 
 
@@ -27,8 +37,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_recycler_holder,  parent, false);
-        return new RecyclerViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_recycler_holder,  parent, false);
+        return new RecyclerViewHolder(view,callback);
     }
 
     @Override

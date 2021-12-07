@@ -7,11 +7,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
+    private RecyclerViewAdapter.Listener callback;
 
-    public RecyclerViewHolder(@NonNull View itemView) {
+
+    public RecyclerViewHolder(@NonNull View itemView, RecyclerViewAdapter.Listener callback ) {
+
         super(itemView);
+        this.callback = callback;
     }
 
 
@@ -20,6 +25,17 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView textView = itemView.findViewById(R.id.item_txt);
         textView.setText(data);
 
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                callback.onItemClick(v,data);
+
+
+
+
+            }
+        });
 
 
     }
