@@ -27,6 +27,22 @@ public class RecyclerViewActivity extends AppCompatActivity {
         arrayItems.add("Derek");
         arrayItems.add("Marina");
         arrayItems.add("Balloo");
+        arrayItems.add("George");
+        arrayItems.add("Derek");
+        arrayItems.add("Marina");
+        arrayItems.add("Balloo");
+        arrayItems.add("George");
+        arrayItems.add("Derek");
+        arrayItems.add("Marina");
+        arrayItems.add("Balloo");
+        arrayItems.add("George");
+        arrayItems.add("Derek");
+        arrayItems.add("Marina");
+        arrayItems.add("Balloo");
+        arrayItems.add("George");
+        arrayItems.add("Derek");
+        arrayItems.add("Marina");
+        arrayItems.add("Balloo");
 
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view_list);
