@@ -1,16 +1,22 @@
 package gr.athtech;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import gr.athtech.recyclerview.RecyclerViewActivity;
 
 public class MainActivity extends AbstractActivity {
 
@@ -65,7 +71,11 @@ public class MainActivity extends AbstractActivity {
 
                 if (email.equals(login_mail) && password.equals(login_pass)){
                         Toast.makeText(getApplicationContext(), "Correct, you can get in now!", Toast.LENGTH_SHORT).show();
-                               }
+
+                    Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                    startActivityForResult(intent,2000);
+
+                }
 
                 else {
                     Snackbar.make(v,"Incorrect Email or Password!",Snackbar.LENGTH_SHORT).show();
@@ -89,5 +99,22 @@ public class MainActivity extends AbstractActivity {
     @Override
     void StopOperations() {
 
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 2000){
+            if (resultCode == Activity.RESULT_OK){
+                Log.d("MSG",String.valueOf(resultCode));
+            }else if (resultCode == Activity.RESULT_CANCELED){
+                Log.d("MSG",String.valueOf(resultCode));
+            }else if (resultCode == 5){
+                String name = data.getExtras().getString("name");
+                Log.d("MSG",name);
+            }else {
+                Log.d("MSG",String.valueOf(resultCode));
+            }
+        }
     }
 }
