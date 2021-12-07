@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shopping_list">
+        <item>Spaghetti</item>
+        <item>Tomato Sauce</item>
+        <item>Vegetable Oil</item>
+        <item>Salt</item>
+        <item>Pepper</item>
+    </string-array>
+
+</resources>

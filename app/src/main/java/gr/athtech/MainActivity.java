@@ -65,11 +65,7 @@ public class MainActivity extends AbstractActivity {
 
                 if (email.equals(login_mail) && password.equals(login_pass)){
                         Toast.makeText(getApplicationContext(), "Correct, you can get in now!", Toast.LENGTH_SHORT).show();
-
-
-
-
-                }
+                               }
 
                 else {
                     Snackbar.make(v,"Incorrect Email or Password!",Snackbar.LENGTH_SHORT).show();
