@@ -8,4 +8,20 @@
         <item>Pepper</item>
     </string-array>
 
+    <string-array name="item_description">
+        <item>description1</item>
+        <item>description2</item>
+        <item>description3</item>
+        <item>description4</item>
+        <item>description5</item>
+    </string-array>
+
+    <integer-array name="item_image">
+        <item>@drawable/spaghetti</item>
+        <item>@drawable/spaghetti</item>
+        <item>@drawable/ic_launcher_foreground</item>
+        <item>@drawable/spaghetti</item>
+        <item>@drawable/spaghetti</item>
+    </integer-array>
+
 </resources>

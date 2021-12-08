@@ -27,7 +27,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     public RecyclerViewAdapter(List<String> arrayData, Listener callback) {
 
-
         this.arrayData = arrayData;
         this.callback = callback;
     }
@@ -37,6 +36,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_recycler_holder,  parent, false);
         return new RecyclerViewHolder(view,callback);
     }
@@ -44,8 +44,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
 
+
         String data = arrayData.get(position);
         holder.bindData(data);
+
 
     }
 
@@ -54,3 +56,4 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
         return arrayData.size() ;
     }
 }
+

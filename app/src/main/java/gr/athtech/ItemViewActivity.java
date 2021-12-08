@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -20,11 +22,27 @@ public class ItemViewActivity extends AppCompatActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
-        String name = getIntent().getExtras().getString("data");
+        String title = getIntent().getExtras().getString("title");
+        String description = getIntent().getExtras().getString("description");
+        int imgId = getIntent().getExtras().getInt("image");
 
-        TextView textView = findViewById(R.id.item_title);
 
-        textView.setText(name);
+
+        TextView item_title = findViewById(R.id.item_title);
+        item_title.setText(title);
+
+
+        TextView item_description =  findViewById(R.id.item_description_txt);
+        item_description.setText(description);
+
+
+        ImageView item_image = findViewById(R.id.item_img_large);
+        item_image.setImageResource(imgId);
+
+
+
+
+
 
 
 

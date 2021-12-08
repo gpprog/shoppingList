@@ -17,7 +17,10 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
         super(itemView);
         this.callback = callback;
+
     }
+
+
 
 
     public void bindData(String data){
