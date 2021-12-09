@@ -2,12 +2,15 @@ package gr.athtech.recyclerview;
 import gr.athtech.R;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
@@ -21,14 +24,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
 
     @NonNull
+    private TypedArray imageData;
     private List<String> arrayData;
     private Listener callback;
 
 
-    public RecyclerViewAdapter(List<String> arrayData, Listener callback) {
+    public RecyclerViewAdapter(List<String> arrayData, TypedArray imageData,Listener callback) {
 
         this.arrayData = arrayData;
         this.callback = callback;
+        this.imageData = imageData;
     }
 
 
@@ -45,8 +50,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
 
 
-        String data = arrayData.get(position);
-        holder.bindData(data);
+       int imgId = imageData.getResourceId(position,0);
+
+       String data = arrayData.get(position);
+
+
+
+        holder.bindData(data,imgId);
+
+
+
+
 
 
     }

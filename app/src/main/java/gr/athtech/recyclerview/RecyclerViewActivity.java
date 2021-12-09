@@ -43,8 +43,13 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view_list);
+        TypedArray images = getResources().obtainTypedArray(R.array.item_image);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getArrayItems(), new RecyclerViewAdapter.Listener() {
+
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getArrayItems(), images, new RecyclerViewAdapter.Listener() {
+
+
             @Override
             public void onItemClick(View view, String data) {
 
@@ -55,7 +60,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                     String[] titles = getResources().getStringArray(R.array.shopping_list);
                     String[] descriptions = getResources().getStringArray(R.array.item_description);
                     TypedArray images = getResources().obtainTypedArray(R.array.item_image);
-
 
 
                     int position = 999;
@@ -123,13 +127,13 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 Log.d("MSG", String.valueOf(resultCode));
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 Log.d("MSG", String.valueOf(resultCode));
-            } else if (resultCode == 5) {
-                String name = data.getExtras().getString("name");
-                Log.d("MSG", name);
             } else {
                 Log.d("MSG", String.valueOf(resultCode));
             }
         }
     }
+
+
+
 
 }

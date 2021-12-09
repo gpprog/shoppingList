@@ -31,14 +31,15 @@
         android:padding="20dp"
         android:text="@string/spaghetti" />
 
-
-
-
-
-
-
-
-
+    <ImageButton
+        android:id="@+id/share_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:contentDescription="share icon"
+        app:srcCompat="@drawable/baseline_share_blue_300_24dp">
+        share this product
+    </ImageButton>
 
 
 </LinearLayout>
