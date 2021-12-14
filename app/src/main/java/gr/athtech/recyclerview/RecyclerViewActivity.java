@@ -42,55 +42,33 @@ public class RecyclerViewActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
 
 
+
         RecyclerView recyclerView = findViewById(R.id.recycler_view_list);
+
         TypedArray images = getResources().obtainTypedArray(R.array.item_image);
-
-
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(getArrayItems(), images, new RecyclerViewAdapter.Listener() {
 
 
             @Override
-            public void onItemClick(View view, String data) {
+            public void onItemClick(View view, String data, int imgData, int position) {
 
                 if (!isClicked) {
 
                     isClicked = true;
 
-                    String[] titles = getResources().getStringArray(R.array.shopping_list);
+
+                    //get the clicked item description
                     String[] descriptions = getResources().getStringArray(R.array.item_description);
-                    TypedArray images = getResources().obtainTypedArray(R.array.item_image);
-
-
-                    int position = 999;
-
-                    for (int i = 0; i < titles.length; i++) {
-
-                        if (titles[i].matches(data)) {
-                            position = i;
-
-                        }
-                    }
-
-
-                    //get the corresponding description
-
                     String itemDescription = descriptions[position];
 
-                    //get the title
-                    String itemTitle = titles[position];
-
-
-                    // get the corresponding imageId
-                    int imgId = images.getResourceId(position,0);
-
-
-
+                    // pass necessary data to next activity
 
                     Intent intent = new Intent(RecyclerViewActivity.this, ItemViewActivity.class);
+
                     intent.putExtra("title", data);
                     intent.putExtra("description", itemDescription);
-                    intent.putExtra("image",imgId);
+                    intent.putExtra("image",imgData);
 
 
                     startActivityForResult(intent, 2000);

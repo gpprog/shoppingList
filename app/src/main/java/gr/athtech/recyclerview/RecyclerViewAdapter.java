@@ -17,7 +17,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     interface Listener {
 
-        public void onItemClick(View view , String data );
+        public void onItemClick(View view , String data , int imgData, int position );
 
     }
 
@@ -49,15 +49,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
 
+        int imgId = imageData.getResourceId(position,0);
+        String data = arrayData.get(position);
 
-       int imgId = imageData.getResourceId(position,0);
-
-       String data = arrayData.get(position);
-
-
-
-        holder.bindData(data,imgId);
-
+        holder.bindData(data,imgId,position);
 
 
 

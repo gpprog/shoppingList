@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="shopping_list">
-        <item>Spaghetti</item>
-        <item>Tomato Sauce</item>
-        <item>Vegetable Oil</item>
-        <item>Salt</item>
-        <item>Pepper</item>
+        <item>Jack Daniels Black</item>
+        <item>WhistlePig 10 Year</item>
+        <item>Four Roses Small Batch Select</item>
+        <item>Silent Pool Gin</item>
+        <item>Saint James 12Yo</item>
+        <item>Bulleit 95 Rye Whiskey</item>
+        <item>Seclusion Aged Tsipouro</item>
+        <item>Dark Cave</item>
+        <item>Mastic Tears Dry</item>
+        <item>Dalmore 12 Year Sherry Cask Select</item>
     </string-array>
 
     <string-array name="item_description">
-        <item>description1</item>
-        <item>description2</item>
-        <item>description3</item>
-        <item>description4</item>
-        <item>description5</item>
+        <item>Tennessee- Sour mash whiskey made in Tennessee from natural corn, rye, barley malt and then charcoal filtered. Sweet with caramel, vanilla and charred wood. Pure, clean, and smooth. Classic. Enjoy on the rocks or in mixed drinks.</item>
+        <item>Vermont- Straight rye whiskey, aged for at least ten years through a unique double-barrel process, earning 96 points from Wine Enthusiast. It embodies the perfect combination of proof, purity, and age - hitting ""the sweet spot"" in all three categories.</item>
+        <item>A fruity small-batch bourbon from Four Roses that is made with a combination of six out of the 10 recipes used by the distillery and matured for at least six years. Aromas of raspberries, cloves and nutmeg fill the nose, complemented by notes of ripe apricots, red berries, vanilla, peppery oak, spearmint and cinnamon throughout the palate and lingering in the finish.</item>
+        <item>Silent Pool Gin is produced at the Albury Estate in the Surrey Hills, right next to Silent Pool, a beautiful mysterious lake. A complex English gin where 24 different herbs are used for its production. In the aromatic characteristics we find flowers, citrus zest, violet, lavender, with earthy and spicy notes to follow. The addition of local honey gives a soft and persistent aftertaste.</item>
+        <item>Saint James 12Yo is a rum aged for at least 12 years in small oak barrels, in the tropical aging conditions of Martinique, for a high-quality tasting experience. On the nose it presents well-rounded woody notes related to the time the rum spends in contact with the oak of the selected barrels. Followed by notes of roasted coffee and spices such as nutmeg, which pave the way for milder flavors of cinnamon and plums.</item>
+        <item>Another MGP-sourced rye, this whiskey also delivers a nice juxtaposition of spicy, herbal notes and sweet tones developed during oak aging. This is a solid, enjoyable rye that feels like you’re getting a bargain.</item>
+        <item>Distillation is done in traditional copper pots, at a very low temperature. Then it ages for 6 years in French oak barrels, which are changed every 3 years, ie 2 times during the process. Full palate and the aromas are reminiscent of citrus and dried fruits. Its round body and sweet aftertaste give it a special character, making it ideal with dried fruits, chocolate and even cigars.</item>
+        <item>A ripe, golden distillate with a wide range of varietal honeyed aromas like prunes, raisins, peel, bergamot and spicy fragrances of vanilla, chocolate and nutmeg, combined with a robust but light-bodied mouth feel. Smooth finish and elegant aromatic aftertaste.</item>
+        <item>Dry mastic produced by distillation of mastic Pistacia lentiscus var. Chia tears (commonly known as mastic trees). Crystal clear with intense mastic aromas in a unique spirit that can be enjoyed as an aperitif or as part of various cocktails.</item>
+        <item>Scotland- An elegant single malt bursting with decadent fruit and spice. Finished in American and European oak sherry casks seasoned with a unique assemblage of Oloroso and Pedro Ximenez Sherries, created specifically for The Dalmore. Top 100 Spirits 2020 Ultimate Challenge</item>
     </string-array>
 
     <integer-array name="item_image">
-        <item>@drawable/spaghetti</item>
-        <item>@drawable/spaghetti</item>
-        <item>@drawable/ic_launcher_foreground</item>
-        <item>@drawable/spaghetti</item>
-        <item>@drawable/spaghetti</item>
+        <item>@drawable/daniels</item>
+        <item>@drawable/wp</item>
+        <item>@drawable/four_roses</item>
+        <item>@drawable/silent_pool</item>
+        <item>@drawable/saint_james</item>
+        <item>@drawable/bulleit</item>
+        <item>@drawable/selclusion_tsipouro</item>
+        <item>@drawable/dark_cave</item>
+        <item>@drawable/mastic</item>
+        <item>@drawable/dalmore</item>
     </integer-array>
 
 </resources>

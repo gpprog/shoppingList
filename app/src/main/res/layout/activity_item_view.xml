@@ -8,34 +8,41 @@
     android:layout_height="match_parent"
     tools:context=".ItemViewActivity"
     android:gravity="center_horizontal"
+    android:background="@drawable/texture_blue_white"
+
     >
     <TextView
         android:text="Item Title"
         android:gravity="center"
         android:id="@+id/item_title"
         android:layout_width="match_parent"
-        android:layout_height="80dp"/>
+        android:layout_height="80dp"
+        android:textColor= "@color/black"
+        android:textSize="25sp"
+        />
 
 
     <ImageView
         android:id="@+id/item_img_large"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_margin="20dp"
         android:src="@drawable/spaghetti" />
 
     <TextView
         android:id="@+id/item_description_txt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:padding="20dp"
-        android:text="@string/spaghetti" />
+        android:textSize="18sp"
+        android:text="@string/app_name" />
 
     <ImageButton
         android:id="@+id/share_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
         android:contentDescription="share icon"
         app:srcCompat="@drawable/baseline_share_blue_300_24dp">
         share this product

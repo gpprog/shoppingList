@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -104,9 +105,19 @@ public class MainActivity extends AbstractActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        TextView password = findViewById(R.id.password_input);
+        password.setText("");
+
+
+        TextView email = findViewById(R.id.mail_input);
+        email.setText("");
+
+
+
         if(requestCode == 2000){
             if (resultCode == Activity.RESULT_OK){
                 Log.d("MSG",String.valueOf(resultCode));
+
             }else if (resultCode == Activity.RESULT_CANCELED){
                 Log.d("MSG",String.valueOf(resultCode));
             }else if (resultCode == 5){

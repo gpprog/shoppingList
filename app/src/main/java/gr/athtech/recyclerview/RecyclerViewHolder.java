@@ -22,7 +22,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindData(String data, int imgId){
+    public void bindData(String data, int imgId, int position){
 
         TextView textView = itemView.findViewById(R.id.item_txt);
         textView.setText(data);
@@ -36,7 +36,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
 
-                callback.onItemClick(v,data);
+                callback.onItemClick(v,data, imgId, position);
 
             }
         });
