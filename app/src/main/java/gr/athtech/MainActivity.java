@@ -71,7 +71,7 @@ public class MainActivity extends AbstractActivity {
 //              check if email and password are correct
 
                 if (email.equals(login_mail) && password.equals(login_pass)){
-                        Toast.makeText(getApplicationContext(), "Correct, you can get in now!", Toast.LENGTH_SHORT).show();
+
 
                     Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                     startActivityForResult(intent,2000);
@@ -107,10 +107,6 @@ public class MainActivity extends AbstractActivity {
 
         TextView password = findViewById(R.id.password_input);
         password.setText("");
-
-
-        TextView email = findViewById(R.id.mail_input);
-        email.setText("");
 
 
 

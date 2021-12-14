@@ -50,9 +50,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
 
         int imgId = imageData.getResourceId(position,0);
-        String data = arrayData.get(position);
+        String title = arrayData.get(position);
+        holder.bindData(title,imgId,position);
 
-        holder.bindData(data,imgId,position);
+        
 
 
 

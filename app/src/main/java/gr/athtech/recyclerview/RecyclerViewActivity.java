@@ -13,6 +13,7 @@ import gr.athtech.R;
 import android.text.NoCopySpan;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,17 +42,33 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
+        ImageButton logoutButton = findViewById(R.id.btn_logout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+
+
+
+            }
+        });
 
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view_list);
 
+        // get the titles from resources
+        List<String> titles = Arrays.asList(getResources().getStringArray(R.array.shopping_list));
+
+        //get the images from resources
         TypedArray images = getResources().obtainTypedArray(R.array.item_image);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getArrayItems(), images, new RecyclerViewAdapter.Listener() {
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter( titles, images, new RecyclerViewAdapter.Listener() {
 
 
             @Override
-            public void onItemClick(View view, String data, int imgData, int position) {
+            public void onItemClick(View view, String title, int imgData, int position) {
 
                 if (!isClicked) {
 
@@ -66,14 +83,17 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(RecyclerViewActivity.this, ItemViewActivity.class);
 
-                    intent.putExtra("title", data);
+                    intent.putExtra("title", title);
                     intent.putExtra("description", itemDescription);
                     intent.putExtra("image",imgData);
 
 
+
+
+
                     startActivityForResult(intent, 2000);
 
-                    isClicked = false;
+
 
                 }
 
@@ -86,22 +106,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     }
 
-    //get the shopping list
-
-    private List<String> getArrayItems() {
-
-        List<String> arrayItems = Arrays.asList(getResources().getStringArray(R.array.shopping_list));
-
-        return arrayItems;
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        isClicked = false;
+
         if (requestCode == 2000) {
             if (resultCode == Activity.RESULT_OK) {
+
                 Log.d("MSG", String.valueOf(resultCode));
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 Log.d("MSG", String.valueOf(resultCode));
