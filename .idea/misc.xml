@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.176" />
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/app_back.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/baseline_add_shopping_cart_black_48dp.xml" value="0.2385" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/baseline_lock_black_24dp.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/baseline_logout_black_24dp.xml" value="0.176" />
@@ -10,20 +12,26 @@
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/baseline_share_blue_300_24dp.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_ellipse_1.xml" value="0.2385" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_ellipse_1__1_.xml" value="0.176" />
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_ellipse_1__2_.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_rectangle_2.xml" value="0.2385" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/ic_rectangle_4.xml" value="0.2385" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/round_logout_black_36dp.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/drawable/round_logout_red_36dp.xml" value="0.176" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_item_view.xml" value="0.25" />
-        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_main.xml" value="0.33811734909244406" />
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_recycle_view.xml" value="0.3372731110173069" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_recycler_holder.xml" value="0.33" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_recycler_list.xml" value="0.1" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/activity_shopping_list.xml" value="0.1" />
         <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/layout/holder_use_name_item.xml" value="0.33811734909244406" />
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.176" />
+        <entry key="..\:/Users/gpapo/AndroidStudioProjects/ShopListApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.176" />
       </map>
     </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="&quot;http://schemas.android.com/apk/res/android&quot;" location="$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
