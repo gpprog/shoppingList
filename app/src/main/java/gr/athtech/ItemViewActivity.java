@@ -58,13 +58,17 @@ public class ItemViewActivity extends AppCompatActivity {
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
                 shareIntent.putExtra(Intent.EXTRA_TEXT,description );
-                shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                shareIntent.putExtra(Intent.EXTRA_STREAM, description);
+                shareIntent.setType("image/*");
+
 
                 try{
+
                     startActivity(Intent.createChooser(shareIntent, "Share item description..."));
 
                 }catch (ActivityNotFoundException e){
                     Log.d("MSG",e.toString());
+
 
                 }
 
